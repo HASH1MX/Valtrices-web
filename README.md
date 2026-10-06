@@ -29,8 +29,10 @@ Then open http://localhost:8080.
 ## Updating the download link
 
 The "Download Valtrices" buttons and the GitHub links are driven by the `CONFIG` object at the top of
-`js/main.js`. Change `repoUrl` and `downloadUrl` there. The matching `href` values in `index.html`
-are no-JS fallbacks and should be updated to the same URLs.
+`js/main.js`. Right now `downloadUrl` points at the site's own `riot.txt` and `downloadAsFile` is
+`true`, so the buttons download that file. To switch to the Windows build later, set `downloadUrl`
+to the GitHub Releases URL, set `downloadAsFile` to `false`, and update `repoUrl`. The matching
+`href` and `download` attributes in `index.html` are no-JS fallbacks and should be updated to match.
 
 ## Adding a section
 

@@ -6,13 +6,21 @@
   'use strict';
 
   /* ---- Site configuration ------------------------------------------------
-     TODO: replace the placeholders with the real GitHub repository once the
-     Windows build is published. Every element with a data-link attribute is
-     pointed at these URLs on page load; the hrefs in index.html are only
-     no-JS fallbacks and should be kept in sync. */
+     Every element with a data-link attribute is pointed at these URLs on
+     page load; the hrefs in index.html are only no-JS fallbacks and should
+     be kept in sync.
+
+     downloadUrl    - where "Download Valtrices" points. Currently the site's
+                      own riot.txt. TODO: switch to the GitHub Releases URL
+                      once the Windows build is published, e.g.
+                      'https://github.com/your-org/valtrices/releases/latest'
+     downloadAsFile - true forces a file download (same-origin URLs only);
+                      set to false when pointing at GitHub Releases.
+     repoUrl        - TODO: replace with the real repository. */
   var CONFIG = {
     repoUrl: 'https://github.com/your-org/valtrices',
-    downloadUrl: 'https://github.com/your-org/valtrices/releases/latest'
+    downloadUrl: 'riot.txt',
+    downloadAsFile: true
   };
 
   var html = document.documentElement;
@@ -26,8 +34,13 @@
     issues: CONFIG.repoUrl + '/issues'
   };
   document.querySelectorAll('[data-link]').forEach(function (el) {
-    var href = linkTargets[el.getAttribute('data-link')];
+    var kind = el.getAttribute('data-link');
+    var href = linkTargets[kind];
     if (href) el.setAttribute('href', href);
+    if (kind === 'download') {
+      if (CONFIG.downloadAsFile) el.setAttribute('download', '');
+      else el.removeAttribute('download');
+    }
   });
 
   /* ---- Header: scrolled state ------------------------------------------- */
