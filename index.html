@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Valtrices – VALORANT stats and match tracking for Windows</title>
+  <meta name="description" content="Valtrices is a free Windows desktop app that tracks your VALORANT matches and turns them into clear statistics, agent and map breakdowns, performance trends, and a custom performance score.">
+  <meta name="theme-color" content="#0a0c10">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Valtrices – VALORANT stats and match tracking">
+  <meta property="og:description" content="Track every VALORANT match and understand how you really play. Free desktop app for Windows.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Valtrices",
+    "operatingSystem": "Windows",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "A desktop app that tracks your VALORANT matches and turns them into statistics, trends, and a custom performance score.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================================================================
+       Header / navigation
+       =================================================================== -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Valtrices home">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#ff4655"/>
+          <path d="M8.5 9.5 16 23.5 23.5 9.5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand__name">Valtrices</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav__menu" aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#score">Performance score</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="https://github.com/your-org/valtrices" data-link="repo" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+        <!-- Placeholder: replaced with the GitHub Releases URL from js/main.js -->
+        <a class="btn btn--primary btn--sm" href="https://github.com/your-org/valtrices/releases/latest" data-link="download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =================================================================
+         Hero
+         ================================================================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <span class="hero__badge"><span class="dot" aria-hidden="true"></span> Free &middot; Windows desktop app</span>
+          <h1 class="hero__title" id="hero-title">Valtrices</h1>
+          <p class="hero__tagline">Track every match. Understand how you really play.</p>
+          <p class="hero__lead">
+            Valtrices is a desktop app for Windows that records your VALORANT match history and turns it into
+            clear statistics, performance trends, and a single performance score. Find out what is working,
+            what is not, and what to practice next.
+          </p>
+          <div class="hero__actions">
+            <!-- Placeholder: replaced with the GitHub Releases URL from js/main.js -->
+            <a class="btn btn--primary btn--lg" href="https://github.com/your-org/valtrices/releases/latest" data-link="download">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              Download Valtrices
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#features">See features</a>
+          </div>
+          <p class="hero__meta">
+            <span>Free download</span>
+            <span>Windows 10 / 11</span>
+            <span>Hosted on GitHub Releases</span>
+          </p>
+        </div>
+
+        <!-- Illustrative app preview (static mock, no real data) -->
+        <div class="hero__visual reveal" data-delay="1" aria-hidden="true">
+          <div class="app-mock">
+            <div class="app-mock__bar">
+              <span class="app-mock__dot"></span><span class="app-mock__dot"></span><span class="app-mock__dot"></span>
+              <span class="app-mock__title">Valtrices &mdash; Overview</span>
+            </div>
+            <div class="app-mock__body">
+              <div class="app-mock__stats">
+                <div class="stat">
+                  <span class="stat__label">Win rate</span>
+                  <span class="stat__value">56%</span>
+                  <span class="stat__delta up">+4% vs last 20</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__label">K/D</span>
+                  <span class="stat__value">1.18</span>
+                  <span class="stat__delta up">+0.07</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__label">Headshot %</span>
+                  <span class="stat__value">24%</span>
+                  <span class="stat__delta down">&minus;1%</span>
+                </div>
+                <div class="stat stat--accent">
+                  <span class="stat__label">Perf. score</span>
+                  <span class="stat__value">78</span>
+                  <span class="stat__delta up">+3</span>
+                </div>
+              </div>
+
+              <div class="app-mock__chart">
+                <div class="app-mock__chart-head">
+                  <span>Performance trend</span>
+                  <span class="muted">Last 20 matches</span>
+                </div>
+                <svg viewBox="0 0 320 110" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#ff4655" stop-opacity=".35"/>
+                      <stop offset="100%" stop-color="#ff4655" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <g stroke="#232935" stroke-width="1">
+                    <line x1="0" y1="27.5" x2="320" y2="27.5"/>
+                    <line x1="0" y1="55" x2="320" y2="55"/>
+                    <line x1="0" y1="82.5" x2="320" y2="82.5"/>
+                  </g>
+                  <path fill="url(#chartFill)" d="M10 78 L26 70 L42 74 L58 60 L74 64 L90 52 L106 58 L122 45 L138 50 L154 40 L170 47 L186 36 L202 42 L218 30 L234 38 L250 28 L266 33 L282 24 L298 30 L310 22 L310 105 L10 105 Z"/>
+                  <path fill="none" stroke="#ff4655" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" d="M10 78 L26 70 L42 74 L58 60 L74 64 L90 52 L106 58 L122 45 L138 50 L154 40 L170 47 L186 36 L202 42 L218 30 L234 38 L250 28 L266 33 L282 24 L298 30 L310 22"/>
+                  <circle cx="310" cy="22" r="7" fill="#ff4655" opacity=".25"/>
+                  <circle cx="310" cy="22" r="3.5" fill="#ff4655"/>
+                </svg>
+              </div>
+
+              <ul class="app-mock__matches">
+                <li class="match match--win">
+                  <span class="match__result">W</span>
+                  <span class="match__map">Ascent <span class="match__agent">&middot; Jett</span></span>
+                  <span class="match__score">13 &ndash; 9</span>
+                  <span class="match__kda">21 / 14 / 6</span>
+                </li>
+                <li class="match match--loss">
+                  <span class="match__result">L</span>
+                  <span class="match__map">Haven <span class="match__agent">&middot; Omen</span></span>
+                  <span class="match__score">11 &ndash; 13</span>
+                  <span class="match__kda">18 / 16 / 9</span>
+                </li>
+                <li class="match match--win">
+                  <span class="match__result">W</span>
+                  <span class="match__map">Lotus <span class="match__agent">&middot; Killjoy</span></span>
+                  <span class="match__score">13 &ndash; 6</span>
+                  <span class="match__kda">16 / 9 / 11</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Why Valtrices
+         ================================================================= -->
+    <section class="section section--alt" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Why Valtrices</span>
+          <h2 class="section__title" id="why-title">Rank tells you where you are. Valtrices tells you why.</h2>
+          <p class="section__lead">The in-game career tab stops at the scoreboard. Valtrices keeps the full picture across every match you play.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card reveal">
+            <span class="why-card__num">01</span>
+            <h3>Everything in one place</h3>
+            <p>Your matches, agents, maps, and stats live together in a single desktop app, with history that does not disappear after a handful of games.</p>
+          </article>
+          <article class="why-card reveal" data-delay="1">
+            <span class="why-card__num">02</span>
+            <h3>Insight, not just numbers</h3>
+            <p>Trends and match analysis connect the dots between games, so you can tell a bad night from a real pattern.</p>
+          </article>
+          <article class="why-card reveal" data-delay="2">
+            <span class="why-card__num">03</span>
+            <h3>A score that reflects you</h3>
+            <p>The custom performance score measures your contribution to a match, not just whether your team won, so improvement stays visible even on a losing streak.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Features
+         ================================================================= -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <span class="eyebrow">Features</span>
+          <h2 class="section__title" id="features-title">Everything you need to understand your game</h2>
+          <p class="section__lead">From a quick look at last night's session to a deep dive into a single round, Valtrices is built around the questions players actually ask.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <h3>Match history</h3>
+            <p>Every match you play is saved automatically with map, agent, mode, result, score, and date. Filter by any of them and jump back to a game whenever you want.</p>
+          </article>
+
+          <article class="feature reveal" data-delay="1">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            </div>
+            <h3>Detailed player statistics</h3>
+            <p>Kills, deaths, assists, K/D, headshot rate, damage, first bloods, and more, broken down per match and across any range of games.</p>
+          </article>
+
+          <article class="feature reveal" data-delay="2">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+            </div>
+            <h3>Agent &amp; map statistics</h3>
+            <p>Win rates and performance for every agent and map you play. See where you are strongest, where you struggle, and what to lock next.</p>
+          </article>
+
+          <article class="feature reveal">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <h3>Performance trends</h3>
+            <p>Charts that follow your key stats over time. Spot a slump early, confirm that practice is paying off, and compare sessions at a glance.</p>
+          </article>
+
+          <article class="feature reveal" data-delay="1">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg>
+            </div>
+            <h3>Match analysis</h3>
+            <p>Open any match for a closer look: the full scoreboard, round outcomes, and the moments that decided the game.</p>
+          </article>
+
+          <article class="feature feature--highlight reveal" data-delay="2">
+            <div class="feature__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+            </div>
+            <h3>Custom performance score</h3>
+            <p>A single rating that combines combat, impact, and consistency into one fair number for how you played, win or lose.</p>
+            <a class="feature__link" href="#score">How the score works <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Performance score spotlight
+         ================================================================= -->
+    <section class="section section--alt" id="score" aria-labelledby="score-title">
+      <div class="container spotlight">
+        <div class="spotlight__text reveal">
+          <span class="eyebrow">Performance score</span>
+          <h2 class="section__title" id="score-title">One number that shows how you actually played</h2>
+          <p class="section__lead">
+            Rank goes up and down with your team. The Valtrices performance score looks only at what you did
+            in the match, so a great game in a loss still counts, and a carried win does not hide a bad one.
+          </p>
+          <ul class="spotlight__list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>Built from your match data.</strong> Combat, round impact, and consistency are weighed together into a single 0 to 100 score.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>Comparable over time.</strong> It is calculated the same way for every match, so you can track it across sessions, agents, and maps.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span><strong>Independent of the result.</strong> Your score reflects your contribution, not your teammates' performance.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Illustrative score card (static mock) -->
+        <div class="score-card reveal" data-delay="1" aria-hidden="true">
+          <div class="score-card__top">
+            <div class="gauge">
+              <svg viewBox="0 0 120 120">
+                <circle class="gauge__track" cx="60" cy="60" r="52" pathLength="100"/>
+                <circle class="gauge__value" cx="60" cy="60" r="52" pathLength="100" style="--score: 78;"/>
+              </svg>
+              <div class="gauge__label">
+                <span class="gauge__num">78</span>
+                <span class="gauge__sub">Score</span>
+              </div>
+            </div>
+            <div class="score-card__meta">
+              <span class="score-card__tag">Last match &middot; Ascent &middot; Jett</span>
+              <h3>Above your average</h3>
+              <p>Your 20-match average is 74. This game ranks in your top 25% on Ascent.</p>
+            </div>
+          </div>
+          <div class="score-bars">
+            <div class="score-bar">
+              <span class="score-bar__label">Combat</span>
+              <span class="score-bar__track"><span class="score-bar__fill" style="--w: 82%;"></span></span>
+              <span class="score-bar__val">82</span>
+            </div>
+            <div class="score-bar">
+              <span class="score-bar__label">Impact</span>
+              <span class="score-bar__track"><span class="score-bar__fill" style="--w: 76%;"></span></span>
+              <span class="score-bar__val">76</span>
+            </div>
+            <div class="score-bar">
+              <span class="score-bar__label">Consistency</span>
+              <span class="score-bar__track"><span class="score-bar__fill score-bar__fill--teal" style="--w: 71%;"></span></span>
+              <span class="score-bar__val">71</span>
+            </div>
+            <div class="score-bar">
+              <span class="score-bar__label">Support</span>
+              <span class="score-bar__track"><span class="score-bar__fill score-bar__fill--teal" style="--w: 68%;"></span></span>
+              <span class="score-bar__val">68</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         How it works
+         ================================================================= -->
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 class="section__title" id="how-title">Up and running in a few minutes</h2>
+          <p class="section__lead">No spreadsheets and no manual tracking. Install once and Valtrices takes care of the rest.</p>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">1</span>
+            <h3>Download and install</h3>
+            <p>Get the latest Windows build from GitHub Releases and run the installer.</p>
+          </li>
+          <li class="step reveal" data-delay="1">
+            <span class="step__num">2</span>
+            <h3>Link your VALORANT account</h3>
+            <p>Connect your account inside the app so Valtrices can pick up your matches as you play.</p>
+          </li>
+          <li class="step reveal" data-delay="2">
+            <span class="step__num">3</span>
+            <h3>Play, then review</h3>
+            <p>After each session, open Valtrices to see new matches, updated stats, trends, and your latest performance score.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Download CTA
+         ================================================================= -->
+    <section class="section section--cta" id="download" aria-labelledby="download-title">
+      <div class="container">
+        <div class="cta reveal">
+          <span class="eyebrow">Download</span>
+          <h2 class="cta__title" id="download-title">Ready to see your real numbers?</h2>
+          <p class="cta__lead">Valtrices is free and available for Windows. Grab the latest release from GitHub and start tracking your next match.</p>
+          <div class="cta__actions">
+            <!-- Placeholder: replaced with the GitHub Releases URL from js/main.js -->
+            <a class="btn btn--primary btn--lg" href="https://github.com/your-org/valtrices/releases/latest" data-link="download">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+              Download Valtrices
+            </a>
+            <a class="btn btn--ghost btn--lg" href="https://github.com/your-org/valtrices/releases" data-link="releases" target="_blank" rel="noopener noreferrer">View all releases</a>
+          </div>
+          <p class="cta__note">Requires Windows 10 or later. Valtrices is a third-party tool and is not affiliated with Riot Games.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       Footer
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#top" aria-label="Valtrices home">
+            <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="#ff4655"/>
+              <path d="M8.5 9.5 16 23.5 23.5 9.5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="brand__name">Valtrices</span>
+          </a>
+          <p>A desktop app for VALORANT players who want to understand their stats, not just see them.</p>
+        </div>
+
+        <nav class="footer__col" aria-label="Product">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#score">Performance score</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#download">Download</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Project">
+          <h4>Project</h4>
+          <ul>
+            <li><a href="https://github.com/your-org/valtrices" data-link="repo" target="_blank" rel="noopener noreferrer">GitHub repository</a></li>
+            <li><a href="https://github.com/your-org/valtrices/releases" data-link="releases" target="_blank" rel="noopener noreferrer">Releases &amp; changelog</a></li>
+            <li><a href="https://github.com/your-org/valtrices/issues" data-link="issues" target="_blank" rel="noopener noreferrer">Report an issue</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="footer__legal">
+        Valtrices is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone
+        officially involved in producing or managing Riot Games properties. Riot Games and VALORANT are trademarks or
+        registered trademarks of Riot Games, Inc.
+      </p>
+
+      <div class="footer__bottom">
+        <span>&copy; <span id="year">2026</span> Valtrices. All rights reserved.</span>
+        <a class="footer__top" href="#top">Back to top <span aria-hidden="true">&uarr;</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
